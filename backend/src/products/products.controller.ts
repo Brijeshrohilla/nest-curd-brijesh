@@ -13,6 +13,7 @@ import { ProductsService } from './products.service';
 export class ProductsController {
   constructor(private readonly productsService: ProductsService) { }
 
+  // POST create product
   @Post()
   async addProduct(
     @Body('price') prodPrice: number,
@@ -27,17 +28,20 @@ export class ProductsController {
     return { id: generatedId };
   }
 
+  // GET get all products
   @Get()
   async getAllProducts() {
     const products = await this.productsService.getProducts();
     return products;
   }
 
+  // GET single product
   @Get(':id')
   getProduct(@Param('id') prodId: string) {
     return this.productsService.getSingleProduct(prodId);
   }
 
+  // PUT update product
   @Put(':id')
   async updateProduct(
     @Param('id') prodId: string,
@@ -49,6 +53,7 @@ export class ProductsController {
     return { id: updatedId };
   }
 
+  // DELETE delete product
   @Delete(':id')
   async removeProduct(@Param('id') prodId: string) {
     await this.productsService.deleteProduct(prodId);
