@@ -49,9 +49,9 @@ export function SingleProduct() {
             <Input disabled={isDisabled} required id='title' type='text' value={product.title || ''} placeholder='Product title' w="100%" h="1.8rem" my=".3rem" onInput={handleInput} />
             <Input disabled={isDisabled} required id='price' type='number' value={product.price || ''} placeholder='Product price' w="100%" h="1.8rem" my=".3rem" onInput={handleInput} />
             <Input disabled={isDisabled} required id='description' type='text' value={product.description || ''} placeholder='Product description' w="100%" h="1.8rem" my=".3rem" onInput={handleInput} />
-            {isDisabled && <Button size="md" bg='teal' border="0" h="2rem" m=".3rem" w="30%" cursor="pointer" onClick={() => setIsDisabled(false)}>Update</Button>}
-            {!isDisabled && <Button disabled={status === 'loading'} size="md" bg='green' border="0" h="2rem" m=".3rem" w="30%" cursor="pointer" onClick={handleUpdate}>{status === 'loading' ? 'wait ...' : 'Save'}</Button>}
-            <Button size="md" disabled={status === 'loading'} bg='red' border="0" h="2rem" m=".3rem" w="30%" cursor="pointer" onClick={handleDelete}>{status === 'loading' ? 'wait ...' : 'Delete'}</Button>
+            {isDisabled && <Button color="white" size="md" bg='teal' border="0" h="2rem" m=".3rem" w="30%" cursor="pointer" onClick={() => setIsDisabled(false)}>Update</Button>}
+            {!isDisabled && <Button color="white" disabled={status === 'loading'} size="md" bg='green' border="0" h="2rem" m=".3rem" w="30%" cursor="pointer" onClick={handleUpdate}>{status === 'loading' ? 'wait ...' : 'Save'}</Button>}
+            <Button size="md" color="white" disabled={status === 'loading'} bg='red' border="0" h="2rem" m=".3rem" w="30%" cursor="pointer" onClick={handleDelete}>{status === 'loading' ? 'wait ...' : 'Delete'}</Button>
           </FormControl>
         </Center>
       </Flex >

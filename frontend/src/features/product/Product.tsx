@@ -39,7 +39,7 @@ export function Product() {
               <Input required id='title' type='text' value={product.title || ''} placeholder='Product title' w="100%" h="1.8rem" my=".3rem" onInput={handleInput} />
               <Input required id='price' type='number' value={product.price || ''} placeholder='Product price' w="100%" h="1.8rem" my=".3rem" onInput={handleInput} />
               <Input required id='description' type='text' value={product.description || ''} placeholder='Product description' w="100%" h="1.8rem" my=".3rem" onInput={handleInput} />
-              <Button disabled={status === 'loading'} type="submit" size="md" bg='teal' border="0" w="101.5%" h="1.8rem" my=".3rem" cursor="pointer" onClick={handleClick}>{status === 'loading' ? 'wait ...' : 'Create'}</Button>
+              <Button color="white" disabled={status === 'loading'} type="submit" size="md" bg='teal' border="0" w="101.5%" h="1.8rem" my=".3rem" cursor="pointer" onClick={handleClick}>{status === 'loading' ? 'wait ...' : 'Create'}</Button>
             </Box>
           </FormControl>
 
